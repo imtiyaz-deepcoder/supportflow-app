@@ -1,0 +1,58 @@
+# 🛠️ SupportFlow – Ticket Resolution System (v2: REST APIs)
+
+This branch (`v2-rest-api`) is part of a full-stack project series where we build a Customer Support Ticketing App using Spring Boot (backend) and React (frontend).
+
+---
+
+## What's Implemented in This Branch
+
+This version contains:
+
+- `TicketController` with full REST API support
+  - `GET /tickets` – Get all tickets
+  - `POST /tickets` – Create new ticket
+  - `PUT /tickets/{id}` – Update existing ticket
+  - `DELETE /tickets/{id}` – Delete ticket
+   Connected to MySQL using Spring Data JPA
+- `Ticket` entity and basic validation
+- JSON request/response structure ready for frontend integration
+- Base URL: `http://localhost:8080/api/tickets`
+
+---
+
+## Sample JSON for Testing via Postman
+
+```Postman JSON Sample
+
+{
+  "subject": "Unable to login",
+  "description": "I am unable to login using my credentials since yesterday.",
+  "status": "OPEN",
+  "priority": "LOW",
+  "customerUsername": "john_doe"
+}
+
+
+{
+  "subject": "Critical payment failure",
+  "description": "Customer unable to complete payment for last 3 hours. Multiple failures reported.",
+  "status": "IN_PROGRESS",
+  "priority": "HIGH",
+  "customerUsername": "support_agent_1"
+}
+
+{
+  "subject": "Bug in ticket submission form",
+  "description": "Submit button sometimes doesn’t work on Firefox.",
+  "status": "CLOSED",
+  "priority": "MEDIUM",
+  "customerUsername": "jane_doe"
+}
+
+{
+  "subject": "Request for feature enhancement",
+  "description": "Can we add a dark mode option to the dashboard?",
+  "status": "OPEN",
+  "priority": "LOW",
+  "customerUsername": "geoff_squire"
+}
