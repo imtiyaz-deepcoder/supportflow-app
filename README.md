@@ -13,3 +13,10 @@ This branch contains:
 1. Clone the branch:
    ```bash
    git clone -b v1-project-setup-dbconnect-model-class https://github.com/yourusername/supportflow-app.git
+2. Update DB credentials in application.properties
+3. Run using
+   ``` from terminal/cmd
+   ./mvnw spring-boot:run
+
+Next Video / Branch 
+v2-rest-api 
